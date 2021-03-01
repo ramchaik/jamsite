@@ -2,10 +2,12 @@
 
 <main>
   <div class="post">
-    <small>My own custom default single.html template</small>
     {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
-    {{ partial "single/header.html" . }} {{ .Content }} {{ partial
-    "single/footer.html" . }}
+    {{ partial "single/header.html" . }}
+    <div style="padding: 1rem; background-color: powderblue">
+      {{ .Content }}
+    </div>
+    {{ partial "single/footer.html" . }}
   </div>
 
   <div class="pagination">
