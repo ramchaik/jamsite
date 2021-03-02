@@ -3,11 +3,12 @@
 <main>
   <div class="post">
     {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
-    {{ partial "single/header.html" . }}
+    {{- if .Params.tags}} {{partial "tags.html" .Params.tags}} {{- end}} {{
+    partial "single/header.html" . }}
     <div style="padding: 1rem; background-color: powderblue">
       {{ .Content }}
     </div>
-    {{ partial "single/footer.html" . }}
+    {{ partial "comments.html" . }} {{ partial "single/footer.html" . }}
   </div>
 
   <div class="pagination">

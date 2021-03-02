@@ -2,6 +2,8 @@
 title: "Hugo Dog"
 date: 2021-02-26T09:49:12+05:30
 draft: true
+photoauthor: "Vaibhav Singh"
+tags: ["photo", "dog"]
 ---
 
 ## HUGO the Dog!
