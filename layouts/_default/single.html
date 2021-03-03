@@ -11,6 +11,11 @@
   {{humanize .}} <br>
   {{end}}
   <hr>
+  {{.GetPage "photos/hugo-dog"}} <br/>
+  {{ with (.GetPage "photos/hugo-dog") }}
+  This is the context for the page: {{.Title}} by {{.Params.Photoauthor}}
+  {{ end }}
+  <hr>
 
 	<div class="post">
 		{{ partial "single/post-info.html" . }}
