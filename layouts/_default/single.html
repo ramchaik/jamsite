@@ -7,7 +7,9 @@
   <hr>
   {{md5 "some-dashed-string"}}
   <hr>
-  {{split "apple,orange,grape" ","}}
+  {{range(split "apple,orange,grape" ",")}}
+  {{humanize .}} <br>
+  {{end}}
   <hr>
 
 	<div class="post">
