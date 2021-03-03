@@ -4,6 +4,12 @@
   <div class="post">
     TEST
     <hr />
+    {{ $myVar := "Hello world"}}
+    <h2>{{ $myVar }}</h2>
+    {{ $myVar := "##### Hello world"}}
+    <h2>{{ $myVar }}</h2>
+
+    <hr />
     {{ .Site.Title }}
     <br />
     {{ .Site.Copyright }}
