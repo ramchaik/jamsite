@@ -3,3 +3,4 @@ languageCode = "en-us"
 title = "JAMSite"
 theme = "tale"
 copyright = "Copyright 2021 ramchaik"
+disableKinds=["section"]
