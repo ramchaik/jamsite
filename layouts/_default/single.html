@@ -1,21 +1,6 @@
 {{ define "main" }}
 
 <main>
-  Function Test:
-  <hr>
-  Is 22 more than 8? <strong>{{cond (gt 22 8) "YES" "NO"}}</strong> 
-  <hr>
-  {{md5 "some-dashed-string"}}
-  <hr>
-  {{range(split "apple,orange,grape" ",")}}
-  {{humanize .}} <br>
-  {{end}}
-  <hr>
-  {{.GetPage "photos/hugo-dog"}} <br/>
-  {{ with (.GetPage "photos/hugo-dog") }}
-  This is the context for the page: {{.Title}} by {{.Params.Photoauthor}}
-  {{ end }}
-  <hr>
 
 	<div class="post">
 		{{ partial "single/post-info.html" . }}
