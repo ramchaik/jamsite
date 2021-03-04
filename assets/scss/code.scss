@@ -1,7 +1,9 @@
+// Highlight shortcode background color
 $codeBG: #272822;
 
 .post {
   .highlight {
     background-color: $codeBG;
+    margin-bottom: 1rem;
   }
 }
