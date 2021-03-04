@@ -1,6 +1,8 @@
 {{ define "main" }}
 
 <main>
+	
+	<link rel="stylesheet" href="{{ (resources.Get "css/code.css").Permalink }}">
 
 	<div class="post">
 		{{ partial "single/post-info.html" . }}

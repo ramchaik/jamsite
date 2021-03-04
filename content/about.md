@@ -8,8 +8,6 @@ type: topfile
 
 # About JAMSite
 
-{{< placehold width="250" height="200" >}}
-
 {{< highlight html >}}
 <h1 class="post-title" style="color: {{ $titleColor }};">{{ .Title }}</h1>
 <div class="post-line"></div>
