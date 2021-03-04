@@ -3,7 +3,10 @@
 <main>
   DATA Test
   <hr />
-  {{ range .Site.Data.users}} {{.name}} {{.surname}}
+  {{ range .Site.Data.users}}
+  <strong> {{.name}} {{.surname}} </strong><br />
+  <small>{{range .skills}}{{.}}, {{end}}</small>
+  <hr />
   <br />
   {{end}}
   <hr />

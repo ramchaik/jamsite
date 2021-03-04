@@ -1,14 +1,23 @@
 [
   {
     "name": "Ray",
-    "surname": "yar"
+    "surname": "yar",
+    "skills": [
+      "JS", "SQL"
+    ]
   },
   {
     "name": "john",
-    "surname": "smith"
+    "surname": "smith",
+    "skills": [
+      "HTML", "CSS"
+    ]
   },
   {
     "name": "bob",
-    "surname": "ross"
+    "surname": "ross",
+    "skills": [
+      "Photoshop"
+    ]
   }
 ]
