@@ -2,7 +2,7 @@
 
 <main>
 	
-	{{ $codeStyles := resources.Get "scss/code.scss" | resources.ToCSS }}
+	{{ $codeStyles := resources.Get "scss/code.scss" | resources.ToCSS | resources.Minify }}
 	<link rel="stylesheet" href="{{ $codeStyles.RelPermalink }}">
 
 	<div class="post">
