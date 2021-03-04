@@ -1,3 +1,3 @@
-{{ $width := .Get 0 }}
-{{ $height := .Get 1 }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
 <img src="https://placehold.it/{{$width}}x{{$height}}" alt="Placeholder Image">
