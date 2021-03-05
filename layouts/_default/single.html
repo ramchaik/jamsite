@@ -1,41 +1,27 @@
 {{ define "main" }}
 
 <main>
-  DATA Test
-  <hr />
-  {{ range .Site.Data.users}}
-  <strong> {{.name}} {{.surname}} </strong><br />
-  <small>{{range .skills}}{{.}}, {{end}}</small>
-  <hr />
-  <br />
-  {{end}}
-  <hr />
+	<div class="post">
+		{{ partial "single/post-info.html" . }}
+		{{ partial "single/title.html" . }}
 
-  {{ range getJSON "https://jsonplaceholder.typicode.com/photos?_limit=5"}}
-  <img style="float: left" src="{{.thumbnailUrl}}" alt="{{.title}}" />
-  {{ end }} 
-	
-	{{ range getJSON "https://jsonplaceholder.typicode.com/posts?_limit=5"}}
-  <h3>{{.title | humanize }}</h3>
-  <p>{{.body}}</p>
-  <br />
-  {{ end }}
+		{{ partial "single/header.html" . }}
 
-  <div class="post">
-    {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
-    {{ partial "single/header.html" . }} {{ .Content }} {{ partial
-    "single/footer.html" . }}
-  </div>
+		{{ .Content }}
 
-  <div class="pagination">
-    {{- if .PrevPage }}
-    <a href="{{ .PrevPage.RelPermalink }}" class="left arrow">&#8592;</a>
-    {{- end }} {{- if .NextPage }}
-    <a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
-    {{- end }}
+		{{ partial "single/footer.html" . }}
+	</div>
 
-    <a href="#" class="top">Top</a>
-  </div>
+	<div class="pagination">
+		{{- if .PrevPage }}
+		<a href="{{ .PrevPage.RelPermalink }}" class="left arrow">&#8592;</a>
+		{{- end }}
+		{{- if .NextPage }}
+		<a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
+		{{- end }}
+
+		<a href="#" class="top">Top</a>
+	</div>
 </main>
 
 {{ end }}
