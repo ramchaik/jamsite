@@ -11,6 +11,10 @@
   {{end}}
   <hr />
 
+	{{ range getJSON "https://jsonplaceholder.typicode.com/photos?_limit=5"}}
+	<img style="float: left;" src="{{.thumbnailUrl}}" alt="{{.title}}">
+	{{ end }}
+
   <div class="post">
     {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
     {{ partial "single/header.html" . }} {{ .Content }} {{ partial
