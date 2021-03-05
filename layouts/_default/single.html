@@ -11,9 +11,15 @@
   {{end}}
   <hr />
 
-	{{ range getJSON "https://jsonplaceholder.typicode.com/photos?_limit=5"}}
-	<img style="float: left;" src="{{.thumbnailUrl}}" alt="{{.title}}">
-	{{ end }}
+  {{ range getJSON "https://jsonplaceholder.typicode.com/photos?_limit=5"}}
+  <img style="float: left" src="{{.thumbnailUrl}}" alt="{{.title}}" />
+  {{ end }} 
+	
+	{{ range getJSON "https://jsonplaceholder.typicode.com/posts?_limit=5"}}
+  <h3>{{.title | humanize }}</h3>
+  <p>{{.body}}</p>
+  <br />
+  {{ end }}
 
   <div class="post">
     {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
