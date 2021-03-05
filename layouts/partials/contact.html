@@ -1,0 +1,32 @@
+<style>
+  #contact {
+    background-color: #dedede;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  #contact input, #contact textarea {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
+
+  #contact button {
+    font-size: 1.25rem;
+    background: dodgerblue;
+    border-radius: 5px;
+    color: white;
+    width: 10rem;
+  }
+</style>
+
+<form id="contact">
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+  <button type="submit">Send Message</button>
+</form>
