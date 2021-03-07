@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+<style>
+  #signin {
+    background-color: #dedede;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  #signin input,
+  #signin button {
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
+
+  #signin button {
+    background: dodgerblue;
+    color: white;
+  }
+</style>
+
+<main>
+  <div class="post">
+    {{ partial "single/post-info.html" . }} {{ partial "single/title.html" . }}
+    {{ partial "single/header.html" . }}
+
+    <div class="premium-content">
+      <h2 style="text-align: center">Sign in to new premium content.</h2>
+      <form id="signin">
+        <input type="text" name="username" placeholder="Username" value="" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value=""
+        />
+        <button type="submit" name="button">Sign In</button>
+      </form>
+    </div>
+
+    {{ partial "single/footer.html" . }}
+  </div>
+
+  <div class="pagination">
+    {{- if .PrevPage }}
+    <a href="{{ .PrevPage.RelPermalink }}" class="left arrow">&#8592;</a>
+    {{- end }} {{- if .NextPage }}
+    <a href="{{ .NextPage.RelPermalink }}" class="right arrow">&#8594;</a>
+    {{- end }}
+
+    <a href="#" class="top">Top</a>
+  </div>
+</main>
+
+{{ end }}
