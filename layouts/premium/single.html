@@ -58,4 +58,32 @@
   </div>
 </main>
 
+<script>
+  // Cloud function URL here mocked using http server
+  const cfURL = "http://localhost:2222/auth";
+
+  document
+    .getElementById("signin")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const username = this.querySelector('[name="username"]').value;
+      const password = this.querySelector('[name="password"]').value;
+      try {
+        const res = await fetch(
+          `${cfURL}?username=${username}&password=${password}`
+        );
+
+        if (res.ok) {
+          const content = await res.text();
+          this.innerHTML = content
+        }
+      } catch (error) {
+        console.log(error);
+      }
+
+      return false;
+    });
+</script>
+
 {{ end }}
