@@ -2,10 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://ramchaik.github.io/jamsite/premium/article-one/</loc>
+    <lastmod>2021-03-07T10:43:24+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://ramchaik.github.io/jamsite/</loc>
+    <lastmod>2021-03-07T10:43:24+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://ramchaik.github.io/jamsite/first-page/</loc>
+    <lastmod>2021-02-26T09:40:48+05:30</lastmod>
+  </url><url>
+    <loc>https://ramchaik.github.io/jamsite/second-page/</loc>
+    <lastmod>2021-02-26T09:40:48+05:30</lastmod>
+  </url><url>
+    <loc>https://ramchaik.github.io/jamsite/categories/</loc>
+  </url><url>
+    <loc>https://ramchaik.github.io/jamsite/tags/</loc>
   </url>
 </urlset>
