@@ -1,8 +1,6 @@
 backend:
-  name: git-gateway
-
-# when using the default proxy server port
-local_backend: true
+  name: github
+  repo: ramchaik/jamsite
 
 media_folder: static/media
 public_folder: /media
